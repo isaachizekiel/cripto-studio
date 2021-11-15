@@ -17,22 +17,19 @@ main()
   };
 
 
-  /*
-    void aes_print_4_4_x(void *in0);
-
-    void aes_print_4_4_y(void *in0);
-
-    void aes_shift_by(void *in, unsigned char axis, unsigned char amount);
-
-    void aes_subs_byte(void *in, unsigned char i, unsigned char j);
-   */
-
-
+  printf("Key\n");
   aes_print_4_4_y(k);
   printf("\n");
-  
+
+  printf("message\n");
   aes_print_4_4_y(m);
   printf("\n");
+
+
+  for (int i = 0; i < 16; i++)
+    {
+      m[i] ^= k[i];
+    }
   
   // subs bytes
   for (int i = 0; i < 4; i++)
@@ -43,24 +40,23 @@ main()
 	}
 
     }
+  printf("after substitute bytes\n");
   aes_print_4_4_y(m);
   printf("\n");
-
 
   aes_shift_by(m, 1, 1);
   aes_shift_by(m, 1, 2);
   aes_shift_by(m, 1, 3);
-  
+
+  printf("after shift rows\n");
   aes_print_4_4_y(m);
   printf("\n");
 
-
+  printf("after mix columns\n");
   aes_mix_column(m);
   aes_print_4_4_y(m);
   
   printf("\n");
-    
-  
   
   return 0;
 }

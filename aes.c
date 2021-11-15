@@ -115,22 +115,5 @@ aes_subs_byte(void *in, unsigned char i, unsigned char j)
 void
 aes_mix_column(void *in)
 {
-  unsigned char (*state)[4] = in;  
-  unsigned char sum = 0, sum_a[4] = {0};  
-  for (unsigned char i = 0; i < 4; i++)
-    {
-      for (unsigned char j = 0; j < 4; j++)	
-	{
-	  sum = 0;
-	  for (unsigned char k = 0; k < 4; k++)
-	    {
-	      sum ^= (GF[j][k] * state[k][i]);
-	    }	  
-	  sum_a[j] = sum;
-	}      
-      for(unsigned char j = 0; j < 4; j++)
-	{
-	  state[j][i] = sum_a[j];
-	}
-    }
+  // not implemented
 }
