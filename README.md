@@ -1,6 +1,8 @@
 # cripto-studio
 
-This repository is my attempt to challange myself how much i grasp cryptography I while practicing c, the course by dan boneh at stanford university.
+This repository is a place where i occationally push my cryptography experments
+
+https://www.coursera.org/learn/crypto
 
 the aes.c is 45% complete:
 
