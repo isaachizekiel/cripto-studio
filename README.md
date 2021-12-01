@@ -14,7 +14,7 @@ The main goal for of this challenge is to implement aes-128 with not nested loop
 
 [/crypto-utils.h](https://github.com/isaachizekiel/crypto-studio/blob/main/crypto-utils.h) home for general cryptographic operations
 
-the results can be verified at [NIST- ADVANCED ENCRYPTION STANDARD](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.197.pdf) by the matrices at page 33 of of the second column.
+the results can be verified at [NIST- ADVANCED ENCRYPTION STANDARD](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.197.pdf) by the matrices at page 33 of of the second row.
 
 
 TODO: implement `static void aes_key_schedule(unsigned char *in);`
